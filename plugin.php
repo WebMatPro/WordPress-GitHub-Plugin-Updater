@@ -41,7 +41,8 @@ function github_plugin_updater_test_init() {
 	include_once 'updater.php';
 
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
-
+	
+	// do not use the condition "is_admin()" if you would like "automatic update" working correctly
 	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 
 		$config = array(
